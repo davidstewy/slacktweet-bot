@@ -1,0 +1,5 @@
+.vscode/
+.env
+.log
+venv
+twitter_credentials.py
