@@ -1,3 +1,6 @@
+# *** This file is being replaced by twit.py.
+# *** I am temporarily keeping it for reference purposes.
+
 from tweepy.streaming import streamListener
 from tweepy import OAuthHandler
 from tweepy import streamListener
