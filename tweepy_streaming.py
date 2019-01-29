@@ -12,11 +12,11 @@ class TwitterStreamer():
         # This handles Twitter authentication and the connection to the Twitter Streaming API.
             listener = StdOutListener()
     auth = OAuthHandler(twitter credentials.CONSUMER KEY, twitter credentials.CONSUMER SECRET)
-    auth.set access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
+    auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
 
     stream = Stream(auth, listener)
 
-    stream.filter(track=hash_tag_list)
+    stream.filter(track=hash_tag_list, isasync=True)
 
 
 class StdOutListener(StreamListener):
@@ -38,7 +38,7 @@ class StdOutListener(StreamListener):
         return True
 
     def on_error(self, status):
-        print(status)
+        print(status.text)
 
 
 if __name__ == "__main__":

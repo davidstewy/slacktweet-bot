@@ -1,1 +1,7 @@
-Stew was here.
+This app is a controllable, long-running Slackbot that subscribes to various Twitter streams
+and republishes those tweets into a channel (or channels) on Slack.  
+The Bot doesn't send messages from Slack to Twitter - just a Twitter listener.  
+The Bot will be deployed on Heroku cloud-hosting platform.
+
+The goal is to create a Slackbot framework that can be extended, adapted, and reused in many ways. 
+The Slackbot can be connected to a personal twitter account.
