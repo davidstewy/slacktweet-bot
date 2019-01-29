@@ -11,7 +11,7 @@ class TwitterStreamer():
     def stream_tweets(self, fetched_tweets_filename, hash_tag_list):
         # This handles Twitter authentication and the connection to the Twitter Streaming API.
             listener = StdOutListener()
-    auth = OAuthHandler(twitter credentials.CONSUMER KEY, twitter credentials.CONSUMER SECRET)
+    auth = OAuthHandler(twitter_credentials.CONSUMER_KEY, twitter_credentials.CONSUMER_SECRET)
     auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
 
     stream = Stream(auth, listener)

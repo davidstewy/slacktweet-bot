@@ -97,7 +97,7 @@ def main(loglevel):
                             '%(levelname)-8s %(message)s',
                             datefmt='%Y-%m-%d %H:%M:%S')
     logger.setLevel(logging.DEBUG)
-    app_start_time = datetime.datetime.now()
+    app_start_time = dt.datetime.now()
     logger.info(
         '\n'
         '--------------------------------------------------\n'
@@ -110,7 +110,7 @@ def main(loglevel):
     parser = create_parser()
     args = parser.parse_args()
     watch_directory(args)
-    uptime = datetime.datetime.now()-app_start_time
+    uptime = dt.datetime.now()-app_start_time
     logger.info(
         '\n'
         '--------------------------------------------------\n'
